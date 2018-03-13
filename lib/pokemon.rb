@@ -21,7 +21,7 @@ end
 
 def self.find(id, db)
   #binding.pry
-  new_pokemon = db.execute("SELECT id, name, type, FROM pokemon WHERE id = ?", id)
+  new_pokemon = db.execute("SELECT id, name, type FROM pokemon WHERE id = ?", id)
   one = self.new(id: id, name: new_pokemon[0][1], type: new_pokemon[0][2], hp: new_pokemon[0][3], db: db)
   #binding.pry
 end
