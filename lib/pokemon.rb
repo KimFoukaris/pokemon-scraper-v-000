@@ -33,4 +33,3 @@ def alter_hp(num, db)
 end
 
 end
-
