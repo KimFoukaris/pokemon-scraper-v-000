@@ -23,7 +23,7 @@ def self.find(id, db)
   #binding.pry
   new_pokemon = db.execute("SELECT id, name, type, hp FROM pokemon WHERE id = ?", id)
   one = self.new(id: id, name: new_pokemon[0][1], type: new_pokemon[0][2], hp: new_pokemon[0][3], db: db)
-  binding.pry
+  #binding.pry
 end
 
 def alter_hp(num, db)
